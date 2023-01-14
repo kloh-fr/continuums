@@ -1,0 +1,194 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ffeeeedd--sass\n"
+"POT-Creation-Date: 2014-04-15 16:33+0100\n"
+"PO-Revision-Date: 2014-04-15 16:33+0100\n"
+"Last-Translator: Gaël Poupard <gael@1-ter-net.com>\n"
+"Language-Team: Gaël Poupard, Luc Poupard\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x\n"
+"X-Poedit-Basepath: G:\\02_sites\\03_ma3yt\\continuums\\wp-content\\themes"
+"\\ffeeeedd--sass\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: G:\\02_sites\\03_ma3yt\\continuums\\wp-content\\themes"
+"\\ffeeeedd--sass\n"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/archive.php:20
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/archive.php:22
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/archive.php:24
+#, php-format
+msgid "Archive : %s"
+msgstr "Archive : %s"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/archive.php:22
+msgid "F Y"
+msgstr "F Y"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/archive.php:24
+msgid "Y"
+msgstr "Y"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/archive.php:26
+msgid "Archive"
+msgstr "Archive"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/archive.php:41
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/author.php:40
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/category.php:29
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/home.php:29
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/search.php:44
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/tag.php:29
+msgid "Permalink to the post"
+msgstr "Lien vers l’article"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/archive.php:61
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/home.php:50
+msgid "Nothing found."
+msgstr "Aucun contenu trouvé."
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/author.php:17
+msgid "Author"
+msgstr "Auteur"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/author.php:25
+msgid "Website"
+msgstr "Site web"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/author.php:60
+msgid "didn't write anything for now."
+msgstr "n'a rédigé aucun article pour le moment."
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/category.php:17
+msgid "Category:"
+msgstr "Catégorie :"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/category.php:49
+msgid "Nothing found in "
+msgstr "Aucun contenu trouvé."
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/comments.php:23
+#, php-format
+msgid "First thought on &ldquo;%2$s&rdquo;"
+msgstr "Un commentaire sur «%2$s»"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/comments.php:23
+#, php-format
+msgid "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr "%1$s commentaires sur &ldquo;%2$s&rdquo;"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/comments.php:36
+msgid "Comments are closed."
+msgstr "Les commentaires sont clos."
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/comments.php:43
+msgid "No comment on &ldquo;"
+msgstr "Aucun commentaire sur «&nbsp;"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/comments.php:43
+msgid "&rdquo;"
+msgstr "&nbsp;»"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/footer.php:4
+msgid "By default, this content is licensed under"
+msgstr "Sauf mention contraire, l’ensemble du contenu est sous"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/header.php:59
+msgid "RSS feed"
+msgstr "Flux RSS"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/header.php:67
+msgid "Skip to navigation"
+msgstr "Aller au menu"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/header.php:68
+msgid "Skip to content"
+msgstr "Aller au contenu"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/header.php:70
+msgid "Skip to table of content"
+msgstr "Aller au sommaire"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/header.php:84
+msgid "Main navigation"
+msgstr "Menu principal"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/home.php:16
+msgid "Recent posts"
+msgstr "Articles récents"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/home.php:38
+msgid "No comment."
+msgstr "Aucun commentaire."
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/home.php:38
+msgid "1 comment."
+msgstr "1 commentaire."
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/home.php:38
+#, php-format
+msgid "% comments."
+msgstr "% commentaires."
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/search.php:22
+#, php-format
+msgid "%1$s search results for %2$s"
+msgstr "%1$s résultats pour la recherche %2$s"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/search.php:26
+#, php-format
+msgid "A single search result for %1$s"
+msgstr "Un seul résultat pour la recherche %1$s"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/search.php:63
+msgid "Sorry, but nothing matched your search criteria."
+msgstr "Désolé, aucun contenu ne correspond à votre recherche."
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/search.php:64
+msgid "Do you want to try again with some different keywords ?"
+msgstr "Voulez réessayer avec de nouveaux mots-clés ?"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/searchform.php:13
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/searchform.php:15
+msgid "Search"
+msgstr "Recherche"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/sitemap.php:22
+msgid "Pages"
+msgstr "Pages"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/sitemap.php:25
+msgid "Feeds"
+msgstr "Flux"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/sitemap.php:28
+msgid "Posts RSS feed"
+msgstr "Flux RSS des articles"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/sitemap.php:31
+msgid "Comments RSS feed"
+msgstr "Flux RSS des commentaires"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/sitemap.php:35
+msgid "Categories"
+msgstr "Catégories"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/sitemap.php:38
+msgid "Posts"
+msgstr "Articles"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/sitemap.php:45
+msgid "j F Y"
+msgstr "j F Y"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/tag.php:17
+msgid "Tags"
+msgstr "Mots-clés"
+
+#: G:\02_sites\03_ma3yt\continuums\wp-content\themes\ffeeeedd--sass/tag.php:49
+msgid "No post found tagged"
+msgstr "Aucun article trouvé portant l'étiquette"
