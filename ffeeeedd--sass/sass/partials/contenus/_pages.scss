@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/**
+* @author Gaël Poupard
+* @site Thème ffeeeedd
+* @lastmodified 2013-06-26
+*/
+
+/* ----------------------------- */
+/* == Pages */
+/* @note Cette feuille de style gère les personnalisations spécifiques à certaines pages.
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Sommaire */
+/* ----------------------------- */
+/*
+  == Accueil
+  == Partenaires
+*/
+
+
+/* == @section Accueil ==================== */
+.home #nav {
+	margin-bottom: 2em;
+}
+
+/* == @section Partenaires ==================== */
+.partenaires .presentation {
+	font-style: italic;
+}
+

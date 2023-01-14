@@ -1,0 +1,101 @@
+@if $ffeeeedd__diaporama == true {
+  /**
+   * @author Gaël Poupard
+   * @see http://www.ffoodd.fr
+   */
+
+  /* ----------------------------- */
+  /* == Diaporama
+   * @note Cette feuille de style est conçue pour styler l’extension «ffeeeedd__diaporama».
+   * @note Elle n’est donc chargée que conditionnellement : la variable $ffeeeedd__diaporama sert à ça.
+    ----------------------------- */
+
+  .section--diaporamas {}
+
+  .ffeeeedd--diaporamas {
+    height: em( 430 );
+    overflow: hidden;
+    position: relative;
+  }
+
+  // On gère la mise en forme du contenu.
+  .ffeeeedd--diaporama {
+    height: em( 430 );
+    max-width: 100%;
+
+    .wp-post-image { max-height: em( 430 ); }
+
+    .wp-caption {
+      background: $strong-color;
+      border: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+    .wp-caption-text { color: $background-color; }
+
+    .entry-title { line-height: 1; }
+  }
+
+  // Sans javascript, pas de diaporama.
+  .no-js .ffeeeedd--diaporama + .ffeeeedd--diaporama { display: none; }
+
+  .js {
+    // On homogénéise le placement et on initie les transitions.
+    .ffeeeedd--diaporama {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      -webkit-transition: all .3s ease-in-out;
+      transition:         all .3s ease-in-out;
+      top: 0;
+    }
+
+    // Le diaporama actif est visible.
+    .ffeeeedd--actif {
+      background: $background-color;
+      opacity: 1;
+    }
+
+    // Le diaporama inactif est déplacé à gauche.
+    .ffeeeedd--inactif {
+      -ms-transform: translateX( -100% ); // @affected IE9
+      -webkit-transform: translate3d( -100%, 0, 0 );
+      transform:         translate3d( -100%, 0, 0 );
+
+      .ie8 & { right: 100%; }
+    }
+
+    // Les diaporamas dans la file d’attente sont superposés à droite.
+    .ffeeeedd--attente {
+      -ms-transform: translateX( 100% ); // @affected IE9
+      -webkit-transform: translate3d( 100%, 0, 0 );
+      transform:         translate3d( 100%, 0, 0 );
+
+      .ie8 & { left: 100%; }
+    }
+
+    .ffeeeedd--controles button {
+      background: $strong-color;
+      border: 0;
+      color: $background-color;
+      line-height: 1;
+      min-width: 0;
+      padding: em( 8 ) em( 4 );
+      @extend %smooth;
+
+      &:hover {
+        background: darken( $strong-color, 20 );
+        color: lighten( $background-color, 20 );
+      }
+
+      &:focus { outline-color: $secondary-color; }
+
+      &:active,
+      &:focus {
+        background: $secondary-color;
+        color: lighten( $background-color, 20 );
+      }
+    }
+  }
+}

@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/**
+* @author Gaël Poupard
+* @site Thème ffeeeedd
+* @lastmodified 2014-01-21
+*/
+
+/* ----------------------------- */
+/* == Types */
+/* @note Cette feuille de style gère les personnalisations spécifiques à certains types de contenus : les types d’articles, les catégories, les archives, etc.
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Sommaire */
+/* ----------------------------- */
+/*
+  == Header
+  == Navigation principale
+  == Sidebar
+  == Main
+  == Footer
+*/
+
+
+/* == @section Header ==================== */
+header[role="banner"] {
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+
+header h1,
+header .h1-like {
+    margin-bottom: 0;
+}
+
+header [itemprop="description"] {
+    display: block;
+    @include ffeeeedd--font( 18, true );
+    margin: .5em 0;
+}
+
+
+/* == @section Navigation principale ==================== */
+[id="nav"] {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Couleurs */
+#nav > ul {
+  padding: 0;
+  margin-top: 0;
+  border-top: 2px solid $third-color;
+}
+
+#nav > ul > li {
+  margin: 0 .5em;
+}
+
+#nav ul a {
+  margin: 0;
+  padding: .5em 1em;
+  color: $primary-color;
+  text-decoration: none;
+}
+
+#nav ul a:hover,
+#nav ul a:focus,
+#nav li:hover,
+#nav li:focus {
+  background: $third-color;
+}
+
+#nav .sub-menu {
+  background: $third-color;
+  font-size: .9em;
+}
+
+#nav .sub-menu a:hover,
+#nav .sub-menu a:focus,
+#nav .sub-menu li:hover,
+#nav .sub-menu li:focus {
+  background: $secondary-color;
+  color: $background-color;
+}
+
+/* Fixation au scroll */
+[id="nav"].fixed {
+  position: fixed;
+  top: 0;
+  *zoom: 1;
+  background: $background-color;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF0F1F1', endColorstr='#FFF0F1F1');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0f1f1), color-stop(70%, #f0f1f1), color-stop(100%, rgba(240, 241, 241, 0)));
+  background: -webkit-linear-gradient(top, #f0f1f1 0%, #f0f1f1 70%, rgba(240, 241, 241, 0) 100%);
+  background: -moz-linear-gradient(top, #f0f1f1 0%, #f0f1f1 70%, rgba(240, 241, 241, 0) 100%);
+  background: -o-linear-gradient(top, #f0f1f1 0%, #f0f1f1 70%, rgba(240, 241, 241, 0) 100%);
+  background: linear-gradient(top, #f0f1f1 0%, #f0f1f1 70%, rgba(240, 241, 241, 0) 100%);
+}
+
+.ie [id="nav"].fixed {
+  background-color: $background-color;
+}
+
+.admin-bar [id="nav"].fixed {
+  top: 32px;
+}
+
+[id="nav"].fixed > ul {
+  width: 100%;
+}
+
+
+/* == Sidebar ==================== */
+
+aside {
+  text-align: left;
+}
+
+aside ul {
+  padding-left: 0;
+}
+
+
+/* == @section Main ==================== */
+
+/* Citations */
+p.exergue {
+  font-size: 3em;
+  font-style: italic;
+  -moz-hyphens: none;
+  hyphens: none;
+  word-wrap: normal;
+  margin: 1em 0;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, .2); /* 60° – pour 120° : 0px 1px 0px */
+}
+
+/* Listes d'articles */
+.posts-list,
+.commentlist {
+  padding-left: 0;
+}
+
+/* Footer d'article */
+article footer,
+.footer {
+  color: $light-color;
+}
+
+article footer {
+  margin: 2em 0 3em;
+}
+
+/* Commentaires */
+.commentlist,
+.commentlist ol {
+  list-style: none;
+}
+
+.commentlist .avatar {
+  float: left;
+  margin: .2em 1em 1em 0;
+}
+
+.commentlist article {
+  background: rgba($background-light-color, 0.8);
+  padding: 1em;
+  margin-bottom: 1em;
+  @include border-radius(4px);
+}
+
+.commentlist .children article {
+  background: rgba($background-light-color, 0.6);
+}
+
+.commentlist .children .children article {
+  background: rgba($background-light-color, 0.5);
+}
+
+.commentlist .children .children .children article {
+  background: rgba($background-light-color, 0.4);
+}
+
+.commentlist .children .children .children .children article {
+  background: rgba($background-light-color, 0.3);
+}
+
+/* Discussion */
+.orateur {
+  text-indent: 2em;
+  font-variant: small-caps;
+}
+
+/* == @section Footer ==================== */
+#footer-partenaires {
+  font-family: $title-font-stack;
+  background: rgba($background-light-color, 0.5);
+  padding: .2em 0 1.5em;
+  margin-top: 4em;
+}
+
+#footer-partenaires ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#footer-partenaires li {
+  display: inline-block;
+  margin: .5em 1em;
+}
+
+#footer-partenaires a[href^="http://"]:after,
+#footer-partenaires a[href^="https://"]:after,
+.partenaires a[href^="http://"]:first-child:after,
+.partenaires a[href^="https://"]:first-child:after {
+    content: "";
+}
+
+#footer-partenaires img {
+  width: 200px;
+  height: auto;
+}
+
+/* http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html */
+#footer-partenaires a img {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+
+#footer-partenaires a:hover img,
+#footer-partenaires a:focus img {
+   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(0%);
+}
+
+#footer {
+  margin-top: 2em;
+}

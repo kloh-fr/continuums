@@ -1,0 +1,339 @@
+@charset "UTF-8";
+/**
+* @author Gaël Poupard
+* @site Thème ffeeeedd
+* @lastmodified 2013-06-26
+*/
+
+/* ----------------------------- */
+/* ==Modules */
+/* @note : Cette feuille de style gère la partie personnalisation et modules ajoutés.
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Sommaire */
+/* ----------------------------- */
+/*
+  == Couleurs
+  == Liens
+  == Modules
+  == Formulaires
+  == Tableaux
+  == Navigation
+  == Header
+  == Footer
+  == WordPress
+*/
+
+
+/* == @section Couleurs ==================== */
+body {
+  background-color: $background-color;
+  color: $primary-color;
+}
+
+strong { color: $strong-color; }
+
+.required { color: crimson; }
+
+
+/* Navigation principale */
+
+
+/* Footer */
+.bg-dark {
+  background: $background-dark-color;
+}
+
+/* Boutons */
+button,
+input[type="button"],
+input[type="submit"] {
+  background: $secondary-color;
+  color: $background-light-color;
+  @include border-radius(4px);
+  border: none;
+  font-family: $regular-font-stack;
+  padding: .2em .5em;
+
+  &:hover,
+  &:focus {
+    background-color: $third-color;
+    color: $primary-color;
+  }
+}
+
+/* == @section Liens ====================
+ * @note Signaler les liens visités, survolés, actifs, externes, vers un mail ou un pdf;
+ * @note Ne surtout pas oublier le :focus, primordial pour l’accessibilité.
+*/
+a {
+  color: $secondary-color;
+
+  &:focus,
+  &:hover { color: darken( $secondary-color, 10 ); }
+
+  &:active,
+  &:visited { color: lighten( $secondary-color, 10 ); }
+}
+
+/* Amélioration et personnalisation liens 
+ * @see Tiny Typo http://tinytypo.tetue.net/
+ * @see RÖCSSTI http://rocssti.nicolas-hoffmann.net/
+ */
+a[hreflang]:after {
+  content: "\0000a0[" attr(hreflang) "]";
+}
+
+/* External Links */
+a[href^="http://"]:after,
+a[href^="https://"]:after {
+  content: "\0000a0\279A";
+}
+
+a[hreflang][href^="http://"]:after,
+a[hreflang][href^="https://"]:after {
+  content: "\0000a0[" attr(hreflang) "]\0000a0\279A";
+}
+
+a[href^="http://www.continuums.local"]:after,
+a[href^="http://test.ma3yt.com"]:after,
+a[href^="http://continuums.ma3yt.com"]:after {
+  content: "";
+}
+
+/* mailto / tel */
+a[href^="mailto:"]:after {
+  content: "\0000a0\2709";
+}
+
+a[href^="tel:"]:after {
+  content: "\0000a0\2706";
+}
+
+a[href$=".pdf"]:after {
+  content: "\0000a0\21A7";
+}
+
+/* Linked images */
+a img {
+  border: 0;
+}
+
+a:focus img,
+a:active img {
+  -moz-transform: translateY(1px);
+  -webkit-transform: translateY(1px);
+  -o-transform: translateY(1px);
+  -ms-transform: translate(1px);
+  transform: translateY(1px);
+}
+
+/* Les liens d’évitement sont de la même couleur que le fond. */
+.skip,
+.skip:hover {
+  color: $background-color;
+  cursor: default;
+}
+
+/* Au focus, ils apparaissent. */
+.skip.show,
+.skip:focus { color: $secondary-color; }
+
+#site-title { @extend .alignmiddle; }
+
+.menu a {
+  display: inline-block;
+  padding: 1em 2em;
+}
+
+/* Positionnement ancres notes */
+[id^="lien-"]:target,
+[id^="note-"]:target {
+  padding-top: 5em;
+  margin-top: -5em;
+  font-weight: bold;
+}
+
+/* Liens des titres */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+}
+
+/* Footer article */
+article footer a {
+  color: $light-color;
+
+  &:focus,
+  &:hover { color: darken( $light-color, 10 ); }
+
+  &:active,
+  &:visited { color: lighten( $light-color, 10 ); }
+}
+
+/* Zones d’action */
+.action--primary { @include ffeeeedd--action( #8dabcd, #032c36 ); }
+
+.action--secondary { @include ffeeeedd--action( lighten( #c42419, 10 ), darken( #c42419, 10 ) ); }
+
+.action--extra { @include ffeeeedd--action( #032c36, #04192f ); }
+
+
+/* == @section Modules ==================== */
+.page-numbers,
+form li { list-style: none; }
+
+.page-numbers li { display: inline-block; }
+
+
+/* == @section Formulaires ==================== */
+form label {
+  display: inline-block;
+  min-width: em( 200 );
+}
+
+input,
+select,
+textarea {
+  border: 1px solid darken( $background-color, 20 );
+  padding: .2em 0 .2em .2em;
+
+  &:focus { border-color: $secondary-color; }
+
+  &:hover,
+  &:active { border-color: $primary-color; }
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea,
+button,
+input[type="button"],
+input[type="reset"] { min-width: em( 100 ); }
+
+/* Commentaires */
+#commentform, 
+.wpcf7-form {
+  text-align: left;
+}
+
+#commentform label,
+.wpcf7-form label {
+    margin: .5em 0;
+    text-align: right;
+    padding-right: .5em;
+}
+
+#commentform textarea,
+.wpcf7-form textarea {
+  margin-top: .2em;
+}
+
+.form-allowed-tags,
+.form-allowed-tags code {
+  color: $light-color;
+  font-size: small;
+}
+
+#commentform .form-submit,
+.wpcf7-form .form-submit {
+  text-align: center;
+}
+
+
+/* == @section Tableaux ==================== */
+table {
+  border-collapse: collapse;
+  caption-side: bottom;
+  display: table;
+  //table-layout: fixed;
+  vertical-align: top;
+  width: 100%;
+
+  th,
+  td {
+    border-bottom: 1px solid darken( $background-color, 20 );
+    padding: .5em;
+    text-align: left;
+  }
+
+  //td { color: darken( $primary-color, 10 ); }
+}
+
+caption {
+  color: darken( $primary-color, 10 );
+  font-style: italic;
+  padding: 1em;
+}
+
+tbody {
+  border: 1px solid darken( $background-color, 20 );
+
+  tr:nth-child(odd) { background: darken( $background-color, 10 ); }
+
+  tr > * + * { border-left: 1px solid darken( $background-color, 20 ); }
+}
+
+
+/* == @section Navigation ==================== */
+.menu li {
+  @extend .inbl;
+  position: relative;
+
+  a {
+    display: block;
+
+    &:hover { text-decoration: none; }
+  }
+}
+
+[id="nav"] {
+  min-height: em( 60 );
+  position: relative;
+  z-index: 5;
+}
+
+
+/* == @section WordPress ==================== */
+/*
+ * @note Classes utilisées par WordPress pour afficher les images avec leurs légendes, les galeries d’images, ainsi que pour distinguer les articles mis en avant et les commentaires ajoutés par l’auteur d’un article himself.
+ */
+
+.wp-caption {
+  margin: 0;
+  width: 100%;
+}
+
+.wp-caption.aligncenter {
+  text-align: center;
+}
+
+.wp-caption-text {
+  color: $light-color;
+  text-align: center;
+  font-size: smaller;
+}
+
+.gallery-caption {}
+
+.sticky {}
+
+.bypostauthor {}

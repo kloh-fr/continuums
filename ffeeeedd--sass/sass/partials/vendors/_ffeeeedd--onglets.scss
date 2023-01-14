@@ -1,0 +1,26 @@
+@if $ffeeeedd__onglets == true {
+  @charset "UTF-8";
+  /**
+   * @author Gaël Poupard
+   * @see http://www.ffoodd.fr
+   */
+
+  /* ----------------------------- */
+  /* == Onglets
+   * @note Cette feuille de style est conçue pour styler l’extension «ffeeeedd__onglets».
+   * @note Elle n’est donc chargée que conditionnellement : la variable $ffeeeedd__onglets sert à ça.
+    ----------------------------- */
+
+  .js .ffeeeedd__onglets {
+    [role="tab"] {
+      border-bottom-color: $strong-color;
+      position: relative;
+
+      + [role="tab"] { margin-left: em( 6 ); }
+
+      &[aria-selected="true"] { border-bottom-color: $background-color; }
+    }
+
+    [role="tabpanel"] { border: 1px solid $strong-color; }
+  }
+}

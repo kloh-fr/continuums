@@ -1,0 +1,360 @@
+@charset "UTF-8";
+/**
+* @author Gaël Poupard
+* @site Thème ffeeeedd
+* @lastmodified 2014-05-08
+* @subsection Références :
+  * @see KNACSS.com V1.1 @author : Raphael Goetter, Alsacreations
+  * @see HTML5boilerplate
+  * @see http://rocssti.nicolas-hoffmann.net/ @author : @Nico3333fr
+*/
+
+/* ----------------------------- */
+/* ==Structure étendue // Design réactif
+/* @note Utilisé pour étendre la structure d’origine : personnaliser la largeur du site, ajouter des tailles en px par exemple, personnaliser les versions responsive (MQ en em)…
+ * @see http://marieguillaumet.com/refonte-mon-portfolio-du-responsive-en-em-premiere-partie
+ * @see http://lanyrd.com/2013/parisweb/sckdfg/
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Sommaire */
+/* ----------------------------- */
+/*
+  == Largeur du contenu
+  == Marges
+  == Composition grille
+  == Pansement pour le viewport
+  == Modification des classes
+    -- Palier «large»
+    -- Palier «medium»
+    -- Palier «small»
+    -- Palier «tiny»
+*/
+
+
+/* == @section Largeur du contenu ==================== */
+.w--site { width: em( $base-width ); }
+
+.mw--site { max-width: em( $base-width ); }
+
+/* == @section Marges ==================== */
+.row > *,
+.col {
+  padding: 0;
+}
+
+main img,
+main #video,
+main #film {
+  margin: 2em 0 1em 0;
+}
+
+main img.wp-smiley,
+div.wpcf7 img.ajax-loader,
+.partenaires img {
+  margin: 0;
+}
+
+/* == @section Composition grille ==================== */
+.reportage {
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.inventaire {
+  width: 60%;
+  margin-right: 30%;
+  margin-left: 10%;
+}
+
+.derive {
+  width: 60%;
+  margin-right: 10%;
+  margin-left: 30%;
+}
+
+/* == @section Pansement pour le viewport ==================== */
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+@-moz-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+@-ms-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+@-o-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+
+/* == @section Modification des classes ====================
+ * @note Premier palier :    «large»
+ * @note Deuxième palier :   «medium»
+ * @note Troisième palier :  «small»
+ * @note Quatrième palier :  «tiny»
+*/
+
+/* -- @subsection Palier «large» -------------------- */
+@media ( min-width: em( $large-width ) ) {
+  .large-hidden { display: none !important; }
+  .large-visible { display: block !important; }
+  .large-no-float { float: none; }
+}
+
+@media ( max-width: em( $large-width ) ) {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  #commentform label,
+  .wpcf7-form label {
+    text-align: left;
+  }
+}
+
+/* -- @subsection Palier «medium» -------------------- */
+@media ( max-width: em( $medium-width ) ) {
+  .medium-hidden { display: none !important; }
+  .medium-visible { display: block !important; }
+  .medium-no-float { float: none; }
+
+  .reportage {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  .inventaire {
+    width: 80%;
+    margin-right: 15%;
+    margin-left: 5%;
+  }
+
+  .derive {
+    width: 80%;
+    margin-right: 5%;
+    margin-left: 15%;
+  }
+}
+
+@media ( min-width: em( $small-width ) ) {
+  .ffeeeedd--fleches .ffeeeedd--sous-menu::after {
+    border-style: solid;
+    border-width: .15em .15em 0 0;
+    content: "";
+    position: relative;
+    display: inline-block;
+    height: 0.45em;
+    width: 0.45em;
+    top: -.1em;
+    left: 0;
+    vertical-align: middle;
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    border-color: #333;
+    margin-left: .5em;
+  }
+
+  header[role="banner"] {
+    margin-bottom: 9em;
+  }
+
+  [id="nav"] {
+    position: absolute;
+    top: 15em;
+  }
+
+  .nav-open,
+  .nav-close {
+    display: none;
+  }
+}
+
+
+/* -- @subsection Palier «small» -------------------- */
+@media ( max-width: em( $small-width ) ) {
+  .small-hidden { display: none !important; }
+  .small-visible { display: block !important; }
+  .small-no-float { float: none; }
+
+  /* On passe les éléments côte à côte les uns sous les autres */
+  .line,
+  .mod,
+  .row,
+  .col,
+  label,
+  fieldset
+  #nav {
+    display: block !important;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border: 0;
+  }
+
+  /* Marges latérales sur les contenus */
+  header[role="banner"],
+  #content,
+  #footer {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  /* Menu de navigation */
+  [id="nav"].fixed {
+    position: relative;
+  }
+
+  .inbl, .menu li, .btn {
+    display: block;
+  }
+
+  #nav > ul {
+    border-top: 1px solid $secondary-color;
+  }
+
+  #nav > ul > li {
+    margin: 0;
+    padding: 0 .5em;
+  }
+
+  [id="nav"] .sub-menu {
+    display: block;
+    position: relative;
+  }
+
+  #nav ul {
+    background: $third-color;
+    text-align: left;
+  }
+
+  #nav .sub-menu {
+    background: transparent;
+  }
+  
+  #nav li {
+    border-bottom: 1px solid $secondary-color;
+  }
+  #nav .sub-menu li {
+    border-bottom: none;
+    border-top: 1px dotted $secondary-color;
+  }
+
+  #nav ul a:hover,
+  #nav ul a:focus,
+  #nav li:hover,
+  #nav li:focus {
+    background: $background-color;
+    color: $primary-color;
+  }
+
+  .ffeeeedd--fleches .ffeeeedd--sous-menu::after {
+    border: none;
+  }
+
+  #nav .sub-menu li a::before {
+    border-style: solid;
+    border-width: .15em .15em 0 0;
+    content: "";
+    position: relative;
+    display: inline-block;
+    height: 0.45em;
+    width: 0.45em;
+    top: -.1em;
+    left: 0;
+    vertical-align: middle;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-color: #333;
+    margin-right: .5em;
+  }
+
+  /* styling menu button 
+   * http://goetter.fr/nav/nav1d/
+   */ 
+  .nav-open,
+  body:target .nav-close {
+    display: block;
+  }
+
+  .nav-close,
+  body:target .nav-open {
+    display: none;
+  }
+
+  .nav-open,
+  .nav-close {
+    border-top: 1px solid $secondary-color;
+    text-align: left;
+  }
+
+  #nav > a:after {
+    content: "≡ Menu";
+    display: block;
+    padding: .5em 1em;
+    background: $third-color;
+    color: $primary-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #nav > a {
+    text-decoration: none;
+  }
+  
+  #nav ul {    
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .4s;
+    transition: max-height .4s;
+    -webkit-transform: translateZ(0); /* activating hardware acceleration */
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  /* handling clic and touch with CSS :hover */
+  body:target #nav ul {
+    max-height: 25em; /* number of items x5 */
+  }
+
+  body:target #nav > a:after {
+    content: "≡ Menu";
+  }
+  
+  /* Marges des listes
+  ul,
+  ol {
+    padding-left: .5em;
+  } */
+}
+
+/* -- @subsection Palier «tiny» -------------------- */
+@media ( max-width: em( $tiny-width ) ) {
+  .tiny-hidden { display: none !important; }
+  .tiny-visible { display: block !important; }
+  .tiny-no-float {float: none; }
+}

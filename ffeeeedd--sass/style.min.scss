@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/**
+ * @author Gaël Poupard
+ * @site Thème ffeeeedd--sass
+ *
+ * @site Adapté pour Continuum(s)
+ * @author Luc Poupard
+ * @lastmodified 2021-01-14
+ */
+
+// Variables
+
+  // Typographie
+$base-line-height:     24px !default; // Inutile, mais Compass attend des valeurs en PX
+$base-font-size:       18px !default; // Inutile, mais Compass attend des valeurs en PX
+$unitless-line-height: 1.5 !default; // ffeeeedd se sert de valeurs sans unité
+$unitless-font-size:   18 !default; // Représente une valeur en PX, mais uniquement pour faciliter le calcul du contexte en EM
+$ratio:                $unitless-font-size * $unitless-line-height !default; // Le ratio doit être dépourvu d’unité
+$regular-font-stack:   "Georgia", "Times", "DejaVu serif", "Times New Roman", serif !default;
+$title-font-stack:     "Roboto", "Verdana", "Arial", sans-serif !default;
+$monospace-font-stack: "Consolas", "Monaco", "Andale Mono", monospace !default;
+$direction: ltr !default;
+
+  // Grilles
+$base-width:           1000 !default; // Largeur maximum en PX (sera convertie en EM)
+$grid-cols:            10 !default;   // Nombre de colonnes pour la grille */
+$grid-gut:             0 !default;  // La gouttière en PX, convertie en pourcentage à la ligne suivante
+$grid-guts:            round( $grid-gut * 100 / $base-width ) !default; // Et voilà la gouttière en pourcents
+
+  // Marges
+$base-spacing:         3 !default;   // Pour les espacements : padding, margin (en EM)…
+
+  // Couleurs
+$primary-color: #333333 !default; // Le texte courant
+$secondary-color: #A65B11 !default; // Les liens
+$third-color: #FF9933 !default; // Couleur du logo reprise dans le design
+$strong-color: #000000 !default; // Les éléments importants : emphases, titres…
+$light-color: #666666 !default; // Les éléments anecdotiques ou secondaires.
+$complementary-color: complement( $primary-color ) !default;
+$background-color: #f0f1f1 !default;
+$background-light-color: #ffffff !default;
+$background-dark-color: #dbdbdb !default;
+
+  // Responsive
+$tiny-width:   320 !default;
+$small-width:  480 !default;
+$medium-width: 600 !default;
+$large-width:  1280 !default;
+
+  // Extensions
+$ffeeeedd__diaporama: false; // Si true, le contenu du fichier est compilé
+$ffeeeedd__navigation: true;
+$ffeeeedd__onglets: false;
+$ffeeeedd__accordeons: false;
+$continuums_player: true;
+
+  // Audits
+$a11y-css: false; // Si true, le contenu du fichier est compilé.
+
+// Imports
+@font-face {
+  font-family: 'Roboto';
+  src: url('font/Roboto-Light-webfont.eot');
+  src: url('font/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('font/Roboto-Light-webfont.woff') format('woff'),
+       url('font/Roboto-Light-webfont.ttf') format('truetype'),
+       url('font/Roboto-Light-webfont.svg#robotolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+  // Compass
+@import "compass/utilities/sprites";
+@import "compass/css3/images";
+@import "compass/css3/border-radius";
+
+  // Utilitaires
+@import "sass/utils/mixins";
+@import "sass/utils/functions";
+@import "sass/utils/placeholders";
+
+  // Fichiers de base : ne devraient pas être modifiés
+@import "sass/partials/base";
+@import "sass/partials/structure";
+@import "sass/partials/formulaires";
+
+  // Extensions
+@import "sass/partials/vendors/ffeeeedd--diaporama";
+@import "sass/partials/vendors/ffeeeedd--navigation";
+@import "sass/partials/vendors/ffeeeedd--tabpanel";
+@import "sass/partials/vendors/ffeeeedd--onglets";
+@import "sass/partials/vendors/ffeeeedd--accordeons";
+@import "sass/partials/vendors/continuums-player";
+
+  // Fichiers personnalisables
+@import "sass/partials/modules/typographie";
+@import "sass/partials/modules/modules";
+// @import "sass/partials/modules/sprites";
+  // Spécifiques aux contenus
+@import "sass/partials/contenus/types";
+@import "sass/partials/contenus/pages";
+
+@import "sass/partials/modules/structure--etendue";
+
+// Audits
+@import "sass/audits/a11y";
